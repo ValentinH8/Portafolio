@@ -1,117 +1,217 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Valentin Hernandez</title>
-    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <title>Portfolio - Valentín Hernandez</title>
 </head>
 
-<header class="header">
-    <section class="navTop">
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#aboutMe">About me</a></li>
-                <li><a href="#project">Project</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </section>
-</header>
+<body>
+    <nav id="navbar" class="navbar">
+        <a href="#home-section">Home</a>
+        <a href="#about-section">About</a>
+        <a href="#experience-section">Experience</a>
+        <a href="#projects-section">Projects</a>
+        <a href="#skills-section">Skills</a>
+        <a href="#contact-section">Contact</a>
+        <img src="./src/assets/img/darklight/light.png" alt="Toggle Theme" id="theme-icon" class="theme-toggle" />
+    </nav>
 
-<body class="body">
-    <section class="navSide">
-        <nav>
-            <ul>
-                <li>
-                    <button class="darkMode">
-                        <img src="asset/img/mode/dark.png" alt="">
-                    </button>
-                </li>
-                <li>
-                    <a href="asset/img/contact/cv.pdf" download class="cv-btn">
-                        <img src="asset/img/contact/cv.pdf" alt="">
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </section>
-    <section class="home">
-        <p>Hi there, my name is</p> <br>
-        <h1>Valentin Hernandez</h1>
-        <h2>and im looking for job</h2>
-        <h3>I'm a developer web specializing in building and designing. Im focused on learn every day.</h3>
-        <p>Here my CV</p>
-    </section>
-
-    <section class="link">
-        <a href="https://github.com/ValentinH8">
-            <img src="asset/img/contact/github.png" alt="">
-            <span>GitHub</span></a>
-        <a href="https://www.linkedin.com/in/valentinh8/">
-            <img src="asset/img/contact/li.png " alt="">
-            <span>LinkedIn</span></a>
-        <a href="mailto:valentinhernandezmateo@gmail.com">
-            <img src="asset/img/contact/gmail.png" alt="">
-            <span>Email</span></a>
-
-    </section>
-
-    <section class="aboutMe">
-        <h2 class="firstAboutMe">
-            <span>About me </span> <br>
-            <span>Here you will find more information about me, what i do, and my current skills mostly in terms of programming and technology</span>
-        </h2>
-        <div class="aboutMe_content">
-            <div class="aboutMe_contentMain">
-                I'm Full stack web developer.
+    <div class="container" id="home-section">
+        <div class="info">
+            <div class="available-badge">
+                <div class="dot"></div>
+                Available for work
             </div>
-            <div class="aboutMe_contentSkills">
-                <h3>My Skills</h3>
-                <div class="skills">
-                    <div class="skillsAll">
-                        HTML
-                    </div>
-                    <div class="skillsAll">
-                        CSS
-                    </div>
-                    <div class="skillsAll">
-                        JavaScript
-                    </div>
-                    <div class="skillsAll">
-                        Responsive Design
-                    </div>
-                    <div class="skillsAll">
-                        Git
-                    </div>
-                    <div class="skillsAll">
-                        GitHub
-                    </div>
-                    <div class="skillsAll">
-                        React
-                    </div>
-                    <div class="skillsAll">
-                        Wordpress
+
+            <h1>Hi, I’m Valentín Hernandez</h1>
+            <h2>Full Stack Developer</h2>
+
+            <p>
+                I am passionate about technology and enthusiastic about learning new things every day.<br />
+                I don’t have extensive experience, but I strive daily to be as useful as possible
+            </p>
+
+            <div class="location-availability">
+                <span>
+                    <strong>Buenos Aires, Argentina</strong>
+                </span>
+            </div>
+
+            <div class="buttons">
+                <a href="#projects-section">
+                    <button class="btn-projects">View Projects</button>
+                </a>
+                <a href="#contact-section">
+                    <button class="btn-work">Let’s Work Together</button>
+                </a>
+            </div>
+
+            <div class="social-icons">
+            </div>
+        </div>
+
+        <div class="image-box">
+            <img src="./src/assets/img/me.png" alt="Profile Picture" class="image-box" />
+        </div>
+    </div>
+
+    <div class="container">
+        <section class="about-me-section">
+            <div class="about-container" id="about-section">
+                <div class="about-image">
+                    <img src="./src/assets/img/me.png" alt="Profile Picture" />
+                </div>
+
+                <div class="about-text">
+                    <h1>About Me</h1>
+                    <p class="subtitle">Passionate about creating innovative solutions</p>
+
+                    <h3>Hi Mate!</h3>
+                    <p>I am passionate about technology and enthusiastic about learning new things every day.</p>
+                    <p>I don’t have extensive experience, but I strive daily to be as useful as possible</p>
+
+                    <ul class="info-list">
+                        <li><span class="info-icon"></span> Valentín Hernandez</li>
+                        <li><span class="info-icon"></span> Argentina, Buenos Aires.</li>
+                        <li><span class="info-icon"></span> valentinhernandezmateo@gmail.com</li>
+                        <li><span class="info-icon"></span> Available for Work</li>
+                    </ul>
+
+                    <div class="interests">
+                        <span>Back Development</span>
+                        <span>JavaScript</span>
+                        <span>Database</span>
+                        <span>Technologies</span>
                     </div>
 
+                    <div class="about-buttons">
+                        <a href="./src/assets/CV - Valentín Hernández Mateo.pdf" download>
+                            <button class="btn-projects">Download My CV</button>
+                        </a>
+
+                        <a href="#contact-section">
+                            <button class="btn-work">Hire Me Now</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="container">
+        <section class="experience-section" id="experience-section">
+            <h1>Experience</h1>
+            <p class="experience-subtitle">
+                An exploration of my career path, learning experiences, and accomplishments
+            </p>
+
+            <div class="experience-tabs">
+                <div class="tab">Work Experience</div>
+                <div class="tab">Achievements</div>
+            </div>
+
+            <div class="experience-grid">
+                <div class="experience-column">
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                </div>
+
+                <div class="experience-column">
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="container">
+        <div class="project-grid" id="projects-section">
+            <div class="project-card">
+                <img src="./src/assets/img/project1.png" alt="Project 1" />
+                <h3>Project Title 1</h3>
+                <p>Short description of what this project does or solves.</p>
+                <div class="tech-tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="./src/assets/img/project2.png" alt="Project 2" />
+                <h3>Project Title 2</h3>
+                <p>Another description that briefly explains this project's purpose.</p>
+                <div class="tech-tags">
+                    <span>React</span>
+                    <span>Tailwind</span>
+                    <span>API</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="./src/assets/img/project3.png" alt="Project 3" />
+                <h3>Project Title 3</h3>
+                <p>Brief summary of a personal or team project.</p>
+                <div class="tech-tags">
+                    <span>Vue</span>
+                    <span>Firebase</span>
+                    <span>SASS</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="./src/assets/img/project4.png" alt="Project 4" />
+                <h3>Project Title 4</h3>
+                <p>Clean, simple and functional design showcasing key skills.</p>
+                <div class="tech-tags">
+                    <span>Next.js</span>
+                    <span>MongoDB</span>
+                    <span>Node.js</span>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section class="projects">
-        <div class="main_content">
-            <h2 class="projects_content">
+    <div class="container">
+        <section class="skills-section" id="skills-section">
+            <h2>Skills</h2>
+            <p>technical expertise and proficiency across different domains of software development</p>
 
-            </h2>
+            <nav class="skills-nav">
+                <button class="tab-btn active" data-tab="resume">Resume</button>
+                <button class="tab-btn" data-tab="frontend">Frontend</button>
+                <button class="tab-btn" data-tab="backend">Backend</button>
+                <button class="tab-btn" data-tab="tools">Tools</button>
+            </nav>
 
-        </div>
+            <div class="skills-card">
+                <h3 id="skill-title">Resume</h3>
+                <p id="skill-description">Brief summary of resume skills and experience.</p>
+            </div>
+        </section>
+    </div>
 
-    </section>
+    <div class="container" id="contact-section">
+        <section class="contact-section" id="contact">
+            <h2>Contact</h2>
+            <p>technical expertise and proficiency across different domains of software development</p>
 
+            <form class="contact-form">
+                <input type="text" name="name" placeholder="Nombre" required />
+                <input type="email" name="email" placeholder="Email" required />
+                <input type="text" name="subject" placeholder="Motivo" required />
+                <textarea name="message" placeholder="Mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </div>
+
+    <script src="./src/main.js"></script>
 </body>
 
 </html>
