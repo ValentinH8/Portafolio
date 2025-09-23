@@ -1,0 +1,116 @@
+.skillsSection {
+  color: #333;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.skillsCard {
+
+  border-radius: 15px;
+  padding: 5rem;
+  max-width: 1200px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+
+.heading {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.subheading {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.tabsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.tabButton {
+  background-color: #e0e0e5;
+  color: #555;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  font-weight: bold;
+}
+
+.tabButton:hover {
+  background-color: #d0d0d5;
+  color: #333;
+}
+
+.tabButton.active {
+  background-color: #6a5acd;
+  color: #fff;
+}
+
+.contentWrapper {
+  background-color: #f2f2fa;
+  border-radius: 15px;
+  padding: 3rem;
+  max-width: 1000px;
+  width: 100%;
+  height: 400px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  text-align: left;
+}
+
+.cardTitle {
+  font-size: 1.8rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.skillsList {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.skillCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100px; 
+  text-align: center;
+}
+
+.iconWrapper {
+  font-size: 4rem; 
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .skillsCard {
+    padding: 2rem;
+  }
+  .tabsContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .tabButton {
+    width: 100%;
+  }
+  .skillsList {
+    justify-content: center;
+  }
+}
