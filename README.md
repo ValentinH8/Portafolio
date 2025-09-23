@@ -24,7 +24,7 @@ Sigue estos pasos para obtener una copia local del proyecto y ejecutarlo en tu m
 
 1.  **Clona el repositorio**
     ```bash
-    git clone [https://github.com/tu-usuario/Portafolio.git](https://github.com/tu-usuario/Portafolio.git)
+    git clone [https://github.com/ValentinH8/Portafolio.git]
     ```
 
 2.  **Instala dependencias**
