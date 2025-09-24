@@ -1,18 +1,28 @@
+// src/components/Navbar.tsx
 import { useState, useEffect, useRef } from 'react';
 import styles from './Navbar.module.css';
 import { IoMdGlasses } from "react-icons/io";
 import { IoGlassesOutline } from "react-icons/io5";
 
 const Navbar = () => {
-    const [isDarkMode, setIsDarkMode] = useState(false);
+    // Inicializa el estado con el valor de localStorage
+    const [isDarkMode, setIsDarkMode] = useState(
+        localStorage.getItem('theme') === 'dark'
+    );
     const [isVisible, setIsVisible] = useState(true);
     const lastScrollY = useRef(0);
 
     const toggleTheme = () => {
-        setIsDarkMode(prevMode => !prevMode);
+        setIsDarkMode(prevMode => {
+            const newMode = !prevMode;
+            // Guarda el nuevo tema en localStorage
+            localStorage.setItem('theme', newMode ? 'dark' : 'light');
+            return newMode;
+        });
     };
 
     useEffect(() => {
+        // Aplica la clase al <body> al cargar el componente
         if (isDarkMode) {
             document.body.classList.add('dark-mode');
         } else {
@@ -44,21 +54,13 @@ const Navbar = () => {
     return (
         <nav className={`${styles.navbar} ${isVisible ? styles.visible : styles.hidden}`}>
             <ul className={styles.navLinks}>
-                <li>
-                    <a href="#home">HOME</a>
-                </li>
-                <li>
-                    <a href="#skills">SKILLS</a>
-                </li>
-                <li>
-                    <a href="#projects">PROJECTS</a>
-                </li>
-                <li>
-                    <a href="#contact">CONTACT</a>
-                </li>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#skills">SKILLS</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
             </ul>
             <div className={styles.themeToggle} onClick={toggleTheme}>
-                <span>{isDarkMode ? <IoGlassesOutline /> :  <IoMdGlasses />}</span>
+                <span>{isDarkMode ? <IoGlassesOutline /> : <IoMdGlasses />}</span>
             </div>
         </nav>
     );

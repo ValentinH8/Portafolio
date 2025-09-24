@@ -29,7 +29,7 @@ body.dark-mode {
 
 body.dark-mode * {
   color: inherit;
-  background-color: #000000;
+  background-color: #1b1b1b;
 }
 
 body.dark-mode h1,
@@ -52,8 +52,4 @@ body.dark-mode a:hover {
   color: #ffffff;
 }
 
-body.dark-mode .skillsCard,
-body.dark-mode .card,
-body.dark-mode .heroCard {
-  box-shadow: 0 4px 15px rgba(173, 30, 30, 0.1);
-}
+
