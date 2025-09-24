@@ -17,16 +17,15 @@ const Home = () => {
             <div>
               <h1 className={styles.greeting}>
                 Hi, I'm Valentín Hernandez
-                <span className={styles.wavingHand}>👋</span>
               </h1>
-               <p className={styles.role}><strong>Full Stack Developer</strong> |<strong> Backend-Oriented </strong></p>
+              <p className={styles.role}><strong>Full Stack Developer</strong> |<strong> Backend-Oriented </strong></p>
             </div>
             <div className={styles.profilePictureCircleMobile}>
               <img src={myImage} alt="Valentín Hernandez" />
             </div>
           </div>
           <p className={styles.description}>
- I am passionate about technology and enthusiastic about learning new things every day. I don't have extensive experience, but I strive daily to be as useful as possible          </p>
+            I am passionate about technology and enthusiastic about learning new things every day. I don't have extensive experience, but I strive daily to be as useful as possible          </p>
           <div className={styles.socialIcons}>
             <span>Follow me on:</span>
             <a href="https://github.com/ValentinH8" target="_blank" rel="noopener noreferrer">
@@ -41,10 +40,19 @@ const Home = () => {
               <MdOutlineWorkOutline className={styles.buttonIcon} />
               Explore My Project
             </button>
-            <button className={styles.downloadCvButton}>
-              <MdDownload className={styles.buttonIcon} />
-              Download My CV
-            </button>
+            <button
+  className={styles.downloadCvButton}
+  onClick={() => {
+    const link = document.createElement("a");
+    link.href = "/CV-Valentin-Hernandez-Mateo.pdf";
+    link.download = "CV-Valentin-Hernandez-Mateo.pdf";
+    link.click();
+  }}
+>
+  <MdDownload className={styles.buttonIcon} />
+  Download My CV
+</button>
+
           </div>
           <div className={styles.quickStats}>
             <div className={styles.statHeading}>
@@ -71,8 +79,8 @@ const Home = () => {
                 <BsCodeSlash className={styles.statIcon} />
                 <span className={styles.statValue}>1 Project</span>
                 <span className={styles.statLabel}>Total Projects</span>
-              </div> 
-              
+              </div>
+
             </div>
           </div>
         </div>
