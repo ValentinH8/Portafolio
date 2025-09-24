@@ -1,10 +1,10 @@
 .seccionContacto {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
   padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  gap: clamp(1rem, 5vw, 5rem);
 }
 
 @media (min-width: 768px) {
@@ -15,6 +15,7 @@
 
 .contenedorSocial,
 .contenedorFormulario {
+  background-color: #ffffff;
   flex: 1;
   padding: 1.5rem;
   border-radius: 12px;

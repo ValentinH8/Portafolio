@@ -1,5 +1,6 @@
 import styles from './Home.module.css';
 import myImage from '../../assets/YO.png';
+import cv from '../../assets/CV - Valentín Hernández Mateo.pdf';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { MdOutlineWorkOutline, MdDownload } from 'react-icons/md';
 import { IoStatsChartOutline } from 'react-icons/io5';
@@ -36,22 +37,24 @@ const Home = () => {
             </a>
           </div>
           <div className={styles.buttons}>
-            <button className={styles.exploreProjectsButton}>
+
+            <a href="#projects" className={styles.exploreProjectsButton}>
               <MdOutlineWorkOutline className={styles.buttonIcon} />
               Explore My Project
-            </button>
+            </a>
+
             <button
-  className={styles.downloadCvButton}
-  onClick={() => {
-    const link = document.createElement("a");
-    link.href = "/CV-Valentin-Hernandez-Mateo.pdf";
-    link.download = "CV-Valentin-Hernandez-Mateo.pdf";
-    link.click();
-  }}
->
-  <MdDownload className={styles.buttonIcon} />
-  Download My CV
-</button>
+              className={styles.downloadCvButton}
+              onClick={() => {
+                const link = document.createElement("a");
+                link.href = cv; 
+                link.download = "CV-Valentin-Hernandez-Mateo.pdf";
+                link.click();
+              }}
+            >
+              <MdDownload className={styles.buttonIcon} />
+              Download My CV
+            </button>
 
           </div>
           <div className={styles.quickStats}>
@@ -77,7 +80,7 @@ const Home = () => {
               </div>
               <div className={styles.statCard}>
                 <BsCodeSlash className={styles.statIcon} />
-                <span className={styles.statValue}>1 Project</span>
+                <span className={styles.statValue}>2 Project</span>
                 <span className={styles.statLabel}>Total Projects</span>
               </div>
 

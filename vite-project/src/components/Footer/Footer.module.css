@@ -1,8 +1,14 @@
 .footer {
   background-color: #ffffff;
-  padding: 40px 80px;
+  padding: 40px 0;
   font-family: Arial, sans-serif;
   color: #333;
+}
+
+.footerInnerContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
 }
 
 .footerContainer {
@@ -97,4 +103,44 @@
 
 .scrollButton:hover {
   background-color: #000;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 20px 0;
+  }
+  
+  .footerInnerContainer {
+    padding: 0 20px;
+  }
+
+  .footerContainer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .footerLinks {
+    text-align: center;
+  }
+
+  .footerLinks li a {
+    display: inline-block;
+    margin: 0 5px;
+  }
+
+  .socialIcons {
+    justify-content: center;
+  }
+
+  .footerBottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .scrollButton {
+    margin: 10px auto;
+  }
 }

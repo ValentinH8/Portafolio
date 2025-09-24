@@ -1,6 +1,6 @@
 .projectsSection {
   padding: 80px 20px;
-  background-color: #f7f7f7;
+  background-color: inherit;
   text-align: center;
 }
 
@@ -18,12 +18,27 @@
   margin: 0 auto;
 }
 
+.card {
+  background-color: #fff;
+  margin: 2rem auto;
+  max-width: 1200px;
+  width: 100%;
+  border-radius: 15px;
+  padding: clamp(1rem, 5vw, 4rem);
+  max-width: 1200px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  gap: clamp(1rem, 5vw, 5rem);
+}
+
+
 .projectCard {
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
 }
 
 .projectCard:hover {
@@ -74,7 +89,7 @@
 
 .technologiesList li {
   display: inline-block;
-  background-color: #e9ecef;
+  background-color: inherit;
   color: #495057;
   padding: 5px 10px;
   border-radius: 20px;
@@ -99,4 +114,21 @@
 
 .linkButton:hover {
   background-color: #000;
+}
+
+@media (max-width: 768px) {
+  .projectCard {
+    padding: 2rem 1rem;
+    margin-left: 100px;
+    width: 100%;
+    margin: 0;
+  }
+
+  .projectSection {
+  color: #333;
+  padding: 0 0 0 0.5rem;
+  margin-left: 100px;
+  text-align: center;
+    width: 100%;
+}
 }

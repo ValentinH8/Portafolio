@@ -31,50 +31,52 @@ const projects: Project[] = [
 
 const Projects: React.FC = () => {
   return (
-    <section id="projects" className={styles.projectsSection}>
-      <h2 className={styles.sectionTitle}>Mis Proyectos</h2>
-      <div className={styles.projectsGrid}>
-        {projects.map((project, index) => (
-          <div key={index} className={styles.projectCard}>
-            <img src={project.image} alt={`Captura de ${project.title}`} className={styles.projectImage} />
-            <div className={styles.projectContent}>
-              <h3 className={styles.projectTitle}>{project.title}</h3>
-              <p className={styles.projectDescription}>{project.description}</p>
-              
-              <div className={styles.technologiesList}>
-                <h4>Tecnologías Usadas:</h4>
-                <ul>
-                  {project.technologies.map((tech, techIndex) => (
-                    <li key={techIndex}>{tech}</li>
-                  ))}
-                </ul>
-              </div>
+    <div className={styles.card}>
+      <section id="projects" className={styles.projectsSection}>
+        <h2 className={styles.sectionTitle}>Mis Proyectos</h2>
+        <div className={styles.projectsGrid}>
+          {projects.map((project, index) => (
+            <div key={index} className={styles.projectCard}>
+              <img src={project.image} alt={`Captura de ${project.title}`} className={styles.projectImage} />
+              <div className={styles.projectContent}>
+                <h3 className={styles.projectTitle}>{project.title}</h3>
+                <p className={styles.projectDescription}>{project.description}</p>
+                
+                <div className={styles.technologiesList}>
+                  <h4>Tecnologías Usadas:</h4>
+                  <ul>
+                    {project.technologies.map((tech, techIndex) => (
+                      <li key={techIndex}>{tech}</li>
+                    ))}
+                  </ul>
+                </div>
 
-              <div className={styles.projectLinks}>
-                <a 
-                  href={project.githubUrl} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className={styles.linkButton}
-                >
-                  Ver en GitHub
-                </a>
-                {project.liveUrl && (
+                <div className={styles.projectLinks}>
                   <a 
-                    href={project.liveUrl} 
+                    href={project.githubUrl} 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className={styles.linkButton}
                   >
-                    Ver Demo
+                    Ver en GitHub
                   </a>
-                )}
+                  {project.liveUrl && (
+                    <a 
+                      href={project.liveUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className={styles.linkButton}
+                    >
+                      Ver Demo
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
-          </div>
-        ))}
-      </div>
-    </section>
+          ))}
+        </div>
+      </section>
+    </div>
   );
 };
 

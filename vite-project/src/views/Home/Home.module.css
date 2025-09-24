@@ -127,10 +127,12 @@
   background-color: #fff;
   border: 1px solid #ddd;
   color: #333;
+  text-decoration: none
 }
 
 .exploreProjectsButton:hover {
   background-color: #444;
+  text-decoration: none;
 }
 
 .downloadCvButton {
@@ -270,6 +272,7 @@
   .exploreProjectsButton,
   .downloadCvButton {
     width: 100%;
+    text-decoration: none
   }
 
   .statsContainer {
